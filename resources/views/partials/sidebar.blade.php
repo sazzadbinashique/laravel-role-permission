@@ -65,6 +65,15 @@
                                             </a>
                                         </li>
                                     @endcan
+                                    @can('permission-access')
+                                        <li class="sa-nav__menu-item">
+                                            <a href="{{ route('admin.permissions.index') }}" class="sa-nav__link">
+                                                <i class="fas fa-lock"></i>
+                                                <span class="sa-nav__menu-item-padding"></span>
+                                                <span class="sa-nav__title">Permissions</span>
+                                            </a>
+                                        </li>
+                                    @endcan
                                     @can('user-profile')
                                         <li class="sa-nav__menu-item">
                                             <a href="{{ route('admin.profile') }}" class="sa-nav__link">

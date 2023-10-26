@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\VoucherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -70,6 +71,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>['auth'], 'as'=>'admin.'], functi
 
     // user management routes start here
     Route::resource('users', UserManagementController::class);
-
+    Route::resource('permissions', PermissionController::class);
 });
 
